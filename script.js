@@ -9,6 +9,10 @@ let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.querySelector("#cards-el")
 
 function startGame() {
+    renderGame()
+}
+
+function renderGame() {
     sumEl.textContent = "Sum: " + sum
     cardsEl.textContent = `Cards: ${firstCard} ${secondCard}` 
     if (sum <= 20) {
@@ -27,5 +31,5 @@ function newCard() {
     messageEl.textContent = "Drawing a new card from the deck!"
     let card = 7
     sum += card
-    startGame()
+    renderGame()
 }
