@@ -9,7 +9,7 @@ let cardsEl = document.querySelector("#cards-el")
 
 function getRandomCard() {
     let randomNumer = Math.floor( Math.random() * 14 ) + 1
-    if (randomNumer > 10) {
+    if (randomNumer > 11) {
         return 10
     } else {
         return randomNumer
