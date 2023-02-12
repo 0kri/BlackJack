@@ -52,10 +52,11 @@ function hit () {
 }
 
 function newCard() {
-    messageEl.textContent = "Drawing a new card from the deck!"
-    let card = getRandomCard()
-    sum += card
-    cards.push(card)
-    renderGame()
-    hit()
+    if (isAlive === true && hasBlackJack === false) {
+        let card = getRandomCard()
+        sum += card
+        cards.push(card)
+        renderGame()
+        hit()
+    }
 }
